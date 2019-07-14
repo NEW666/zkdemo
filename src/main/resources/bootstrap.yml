@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    zookeeper:
+      config:
+        enabled: true
+        root: conf
+        defaultContext: apps
+        profileSeparator: '::'
