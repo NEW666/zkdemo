@@ -1,10 +1,17 @@
-
 spring:
-  cloud:
-    zookeeper:
-      connect-string: localhost:2181
-
-server:
-  port: 9001
-
-
+  application:
+    name: zkdemo
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/zkdemo?useUnicode=true&characterEncoding=UTF-8
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 960620
+    #type: com.alibaba.druid.pool.DruidDataSource
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+      database-platform: org.hibernate.dialect.MySQL5Dialect
+      open-in-view: true

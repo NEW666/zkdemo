@@ -1,8 +1,26 @@
+server:
+  port: 9003
+
 spring:
+  application:
+    name: zkdemo
   cloud:
     zookeeper:
+      connect-string: 47.106.230.109:2181
+      discovery:
+        register: true
+        preferIpAddress: true
+        root: /conf/app/
       config:
         enabled: true
-        root: conf
-        defaultContext: apps
+        root: /conf
+        defaultContext: zkdemo
         profileSeparator: '::'
+      enabled: true
+#  zipkin:
+#    base-url: http://192.168.1.167:9411/
+#    sender:
+#      type: web
+
+
+
